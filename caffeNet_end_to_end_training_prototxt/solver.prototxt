@@ -1,0 +1,21 @@
+#net: "[<net_filepath>]"
+train_net: "/#Your Direction#/train_net.prototxt"
+test_net: "/#Your Direction#/test_net.prototxt"
+test_iter: 11
+test_interval: 500
+max_iter: 3000
+
+# Each forward/backward iteration is done for batch_size * iter_size inputs at a time
+iter_size: 1
+snapshot_prefix: "/#Your Direction#/finetune"
+solver_mode: GPU
+snapshot: 4000
+snapshot_after_train: true
+display: 1
+base_lr: 0.00001
+regularization_type: 'L2'
+weight_decay: 5e-02
+type: "Adam"
+lr_policy: "fixed"
+momentum: 0.9
+momentum2: 0.95
